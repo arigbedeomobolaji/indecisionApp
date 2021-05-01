@@ -1,0 +1,235 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #333745;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.add-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.6rem;
+  margin: 0;
+}
+
+.add-option__input {
+  background: #333745;
+  border: none;
+  border-bottom: 0.3rem solid #1d2028;
+  color: #a5afd7;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 0 1.2rem 0;
+  outline: none;
+  padding: 1.6rem;
+}
+
+.add-option-error {
+  color: #a5afd7;
+  font-style: italic;
+  margin-top: 1.6rem;
+  padding: 1.2rem;
+}
+
+@media (min-width: 45rem) {
+  .add-option {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .add-option__input {
+    margin: 0 1.2rem 0 0;
+  }
+}
+
+.big-button {
+  background: #8357c5;
+  border: none;
+  border-bottom: 0.6rem solid #693cad;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 3.2rem;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+.button {
+  background: #8357c5;
+  border: none;
+  border-bottom: 0.3rem solid #693cad;
+  color: #fff;
+  font-weight: 500;
+  padding: 1.2rem;
+}
+
+.button--link {
+  background: none;
+  border: none;
+  color: #a5afd7;
+  padding: 0;
+}
+
+@media (min-width: 45rem) {
+  .big-button {
+    font-size: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.header {
+  background: #20222b;
+  color: #fff;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+}
+
+.header__subtitle {
+  color: #a5afd7;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (min-width: 45rem) {
+  .header {
+    margin-bottom: 4.8rem;
+  }
+}
+
+/* 
+BEM - BLOCK ELEMENT MODIFIER 
+A BLOCK is a core building block something big like the header and 
+ELEMENTS are things that go inside of that block to make them useful. to identify an element in a block we use BLOCK__ELEMENT(BLOCK FOLLOWED BY DOUBLE UNDERSCORE THEN FOLLLOWED BY THE ELEMENT WE'RE TARGETING IN THE BLOCK)
+SO we put block and element together to target everything in our application
+MODIFIER allows us to take a BLOCK then make a few tweaks to it to thereby getting it to look like another block. to identify a modifier we use BLOCK--MODIFIER (i.e. BLOCK FOLLOWED BY DOUBLE HYPEN FOLLOWED BY MODIFIER)
+*/
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: #464b5e;
+  color: #fff;
+  display: block;
+  max-width: 30rem;
+  outline: none;
+  padding: 3.2rem;
+  text-align: center;
+}
+
+.modal__title {
+  margin: 0 0 3.2rem 0;
+}
+
+.modal__body {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 3.2rem 0;
+  padding: 1.6rem;
+  word-break: break-all;
+}
+
+.option {
+  border-bottom: 1px solid #5c627b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3.2rem 1.6rem;
+}
+
+.option__text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  padding-right: 1.6rem;
+  word-break: break-all;
+}
+
+.option__text::first-letter {
+  text-transform: uppercase;
+}
+
+.widget {
+  background: #464b5e;
+  margin-bottom: 4.8rem;
+}
+
+.widget__message {
+  border-bottom: 1px solid #5c627b;
+  color: #a5afd7;
+  margin: 0;
+  padding: 3.2rem;
+  text-align: center;
+}
+
+.widget-header {
+  background: #3c4251;
+  color: #a5afd7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.6rem;
+}
+
+.widget-header__title {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */

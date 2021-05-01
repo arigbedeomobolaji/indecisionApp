@@ -1,0 +1,29 @@
+.header {
+  background: $off-black;
+  color: #fff;
+  margin-bottom: $l-size;
+  padding: $m-size 0;
+}
+
+.header__title {
+  font-size: $l-size;
+}
+
+.header__subtitle {
+  color: $off-white;
+  font-size: $m-size;
+  font-weight: 500;
+}
+
+@media (min-width: $desktop) {
+  .header {
+    margin-bottom: $xl-size;
+  }
+}
+/* 
+BEM - BLOCK ELEMENT MODIFIER 
+A BLOCK is a core building block something big like the header and 
+ELEMENTS are things that go inside of that block to make them useful. to identify an element in a block we use BLOCK__ELEMENT(BLOCK FOLLOWED BY DOUBLE UNDERSCORE THEN FOLLLOWED BY THE ELEMENT WE'RE TARGETING IN THE BLOCK)
+SO we put block and element together to target everything in our application
+MODIFIER allows us to take a BLOCK then make a few tweaks to it to thereby getting it to look like another block. to identify a modifier we use BLOCK--MODIFIER (i.e. BLOCK FOLLOWED BY DOUBLE HYPEN FOLLOWED BY MODIFIER)
+*/
